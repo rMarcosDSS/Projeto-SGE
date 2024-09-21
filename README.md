@@ -134,8 +134,7 @@ Gerencie receitas e gastos. É possível gerar PDFs e controlar se estão quitad
 ### Cadastro de Faturamentos
 Cadastre gastos e receitas, com opção de adicionar descrição e estado de quitação.
 
-![Tela Faturamentos – Cadastro](![image](https://github.com/user-attachments/assets/0d457508-283f-4de0-9b70-677ad100947d)
-)  
+![Tela Faturamentos – Cadastro](https://github.com/user-attachments/assets/0d457508-283f-4de0-9b70-677ad100947d))  
 *Fonte: Do próprio autor, 2022.*
 
 ---
