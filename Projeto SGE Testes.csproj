@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ADD7F0A5-D3A1-434A-BB38-59389AC5CD9F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Projeto_SGE_Testes</RootNamespace>
+    <AssemblyName>Projeto SGE Testes</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\Documentos\_Trabalhos\2022\Tec_PDTCC\Cap IV\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>E751395B059E7B16A242CD1B4391DAF9BC859955</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Projeto SGE Testes_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Docking">
+      <HintPath>D:\Documentos\_Trabalhos\2022\Tec_PDTCC\Cap IV\esbolço telas\Teste V4\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Navigator">
+      <HintPath>D:\Documentos\_Trabalhos\2022\Tec_PDTCC\Cap IV\esbolço telas\Teste V4\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Ribbon">
+      <HintPath>D:\Documentos\_Trabalhos\2022\Tec_PDTCC\Cap IV\esbolço telas\Teste V4\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>D:\Documentos\_Trabalhos\2022\Tec_PDTCC\Cap IV\esbolço telas\Teste V4\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Workspace">
+      <HintPath>D:\Documentos\_Trabalhos\2022\Tec_PDTCC\Cap IV\esbolço telas\Teste V4\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
+    </Reference>
+    <Reference Include="Correios, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Correios-Api.1.1.1\lib\portable-net45+win\Correios.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.28.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AltFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltFuncionario.Designer.cs">
+      <DependentUpon>AltFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AltMateriais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltMateriais.Designer.cs">
+      <DependentUpon>AltMateriais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AltObras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltObras.Designer.cs">
+      <DependentUpon>AltObras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AltPagamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltPagamentos.Designer.cs">
+      <DependentUpon>AltPagamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AltClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltClientes.Designer.cs">
+      <DependentUpon>AltClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AltPonto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltPonto.designer.cs">
+      <DependentUpon>AltPonto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AltOrcamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltOrcamento.Designer.cs">
+      <DependentUpon>AltOrcamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AltUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltUsuarios.Designer.cs">
+      <DependentUpon>AltUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadPonto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadPonto.designer.cs">
+      <DependentUpon>CadPonto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadUsuarios.Designer.cs">
+      <DependentUpon>CadUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Conexao.cs" />
+    <Compile Include="ConsClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsClientes.designer.cs">
+      <DependentUpon>ConsClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsFuncionario.designer.cs">
+      <DependentUpon>ConsFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsMateriais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsMateriais.designer.cs">
+      <DependentUpon>ConsMateriais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsObras .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsObras .Designer.cs">
+      <DependentUpon>ConsObras .cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadPagamentos .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadPagamentos .Designer.cs">
+      <DependentUpon>CadPagamentos .cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadOrcamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadOrcamentos.Designer.cs">
+      <DependentUpon>CadOrcamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AltServicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltServicos.Designer.cs">
+      <DependentUpon>AltServicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadServicos .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadServicos .Designer.cs">
+      <DependentUpon>CadServicos .cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadMateriais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadMateriais.Designer.cs">
+      <DependentUpon>CadMateriais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadFuncionario.Designer.cs">
+      <DependentUpon>CadFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadObras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadObras.Designer.cs">
+      <DependentUpon>CadObras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadClientes.Designer.cs">
+      <DependentUpon>CadClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsOrcamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsOrcamentos.Designer.cs">
+      <DependentUpon>ConsOrcamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsPagamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsPagamentos.designer.cs">
+      <DependentUpon>ConsPagamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsPonto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsPonto.designer.cs">
+      <DependentUpon>ConsPonto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsServicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsServicos.designer.cs">
+      <DependentUpon>ConsServicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsUsuarios.designer.cs">
+      <DependentUpon>ConsUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AltFuncionario.resx">
+      <DependentUpon>AltFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AltMateriais.resx">
+      <DependentUpon>AltMateriais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AltObras.resx">
+      <DependentUpon>AltObras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AltPagamentos.resx">
+      <DependentUpon>AltPagamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AltClientes.resx">
+      <DependentUpon>AltClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AltPonto.resx">
+      <DependentUpon>AltPonto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AltOrcamento.resx">
+      <DependentUpon>AltOrcamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AltUsuarios.resx">
+      <DependentUpon>AltUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadPonto.resx">
+      <DependentUpon>CadPonto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadUsuarios.resx">
+      <DependentUpon>CadUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsClientes.resx">
+      <DependentUpon>ConsClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsFuncionario.resx">
+      <DependentUpon>ConsFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsMateriais.resx">
+      <DependentUpon>ConsMateriais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsObras .resx">
+      <DependentUpon>ConsObras .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadPagamentos .resx">
+      <DependentUpon>CadPagamentos .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadOrcamentos.resx">
+      <DependentUpon>CadOrcamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AltServicos.resx">
+      <DependentUpon>AltServicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadServicos .resx">
+      <DependentUpon>CadServicos .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadMateriais.resx">
+      <DependentUpon>CadMateriais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadFuncionario.resx">
+      <DependentUpon>CadFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadObras.resx">
+      <DependentUpon>CadObras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadClientes.resx">
+      <DependentUpon>CadClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsOrcamentos.resx">
+      <DependentUpon>ConsOrcamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsPagamentos.resx">
+      <DependentUpon>ConsPagamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsPonto.resx">
+      <DependentUpon>ConsPonto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsServicos.resx">
+      <DependentUpon>ConsServicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsUsuarios.resx">
+      <DependentUpon>ConsUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Projeto SGE Testes_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagens\30p30\Icone_Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagens\30p30\teste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagens\30p30\Logo-Hefet 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alterar Clientes.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alterar Clientes1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alterar Clientes2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alterar Materiais.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alterar Obras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alterar Orçamentos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alterar Pagamentos.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cadastrar Clientes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cadastrar Funcionários.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cadastrar Materiais.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cadastrar Obras.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cadastrar Orçamentos.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cadastrar Pagamentos.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cadastrar Serviços.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cadastrar Usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Consultar Clientes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Consultar Usuários.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alterar Serviços.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
